@@ -75,6 +75,14 @@
 body{
     scroll-behavior: smooth;
 }
+@media screen and (max-width:765px) {
+    .hide-on-sm{
+        display: none !important;
+    }
+    .col-md-6.d-flex.align-items-stretch.hide-on-sm{
+        display: none !important;
+    }
+}
 header{
     position: relative;
     width: 100%;
@@ -222,8 +230,10 @@ header{
         .banner-img-div{
             width: fit-content;
             position: absolute;
-            right: 50px;
-            top: 50px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            top: 10px;
             .banner-img{
                 width: 300px;
             }
@@ -333,5 +343,99 @@ header{
         width: 100px;
         height: 100px;
         z-index: 0;
+    }
+}
+@media screen and (max-width:765px) {
+    header{
+        .circle-shape.shape1{
+            top: 50px;
+            left: 15px;
+            z-index: 1;
+            opacity: 0;
+        }
+        .line-shape.shape2{
+            right: -66px;
+            top: 60vh;
+            transform: rotate(143deg);
+        }
+        .line-shape.shape3{
+            right: -66px;
+            top: 61.5vh;
+            transform: rotate(143deg);
+        }
+        .line-shape.shape4{
+            right: -66px;
+            top: 63vh;
+            transform: rotate(143deg);
+        }
+        .shape-5{
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            animation: rotate 15s linear infinite;
+            z-index: 2;
+            .line-shape{
+                position: static;
+            }
+            .line-shape.a{
+                width: 10px;
+            }
+            .line-shape.b{
+                width: 30px;
+            }
+            .line-shape.c{
+                width: 50px;
+            }
+            .line-shape.d{
+                width: 70px;
+            }
+            .line-shape.e{
+                width: 50px;
+            }
+            .line-shape.f{
+                width: 30px;
+            }
+            .line-shape.g{
+                width: 10px;
+            }
+        }
+        .circle-shape-b.shape6{
+            top: 10px;
+            right: -27px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            transform: translateX(188px);
+        }
+    }
+}
+
+
+
+
+/* ............. contact section ................. */
+.contact-section{
+    padding: 50px 0;
+}
+
+
+.whatsapp-btn{
+    background: #2eb843;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        font-size: 35px;
     }
 }
