@@ -1,0 +1,337 @@
+
+:root{
+    --primary-color:#343958;
+    --secondary-color:#c1311e;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Satisfy&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+*{
+    font-family: "DM Sans", sans-serif;
+}
+/* animations */
+ @-webkit-keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes color-change {
+    0%{
+        background: #343958;
+    }
+    50%{
+        background: #8e3237;
+    }
+    100%{
+        background: #343958;
+    }
+  }
+  @keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }
+  
+/* animations END */
+/* ........ shapes .......... */
+.circle-shape{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: color-change 5s linear infinite;
+}
+.circle-shape-b{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1vh solid var(--primary-color);
+}
+.line-shape{
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+    animation: color-change 5s linear infinite;
+    animation-delay: 0.5s;
+}
+/* ........ shapes END .......... */
+body{
+    scroll-behavior: smooth;
+}
+header{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+/* .................. navbar .............. */
+.navbar{
+    .navbar-brand img{
+        height: 60px;
+        z-index: 1000;
+        position: relative;
+    }
+    .btn{
+        color: white;
+        background-color: var(--primary-color);
+        text-transform: capitalize;
+    }
+    .btn:hover{
+        color: white;
+    }
+}
+/* .................. navbar END .............. */
+
+
+/* .................. banner .............. */
+.banner{
+    position: relative;
+    .contents{
+        margin-top: 30vh;
+        h1{
+            font-weight: bolder;
+            text-transform: capitalize;
+            font-size: 60px;
+            margin-bottom: 50px;
+            
+        }
+        h3{
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            border-bottom: 1px solid #02182694;
+            width: fit-content;
+            padding-bottom: 5px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
+                animation: bg-pan-left 5s ease-in-out infinite both;
+            color: #000000ba;
+                .check{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 20px;
+                    transform: translateX(-120%);
+                }
+        }
+    }
+
+    /* image part */
+    .banner-img-div{
+        width: fit-content;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        .banner-img{
+            width: 70vh;
+            z-index: 1;
+            position: relative;
+        }
+    }
+
+    /* whatsapp button */
+    .row.whatsapp-row{
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        .whatsapp{
+            display: flex;
+            align-items: center;
+            color: #2eb843;
+            padding: 5px 15px;
+            border-radius: 30px;
+            border: 0;
+            width: fit-content;
+            background: white;
+            font-weight: bold;
+            border: 2px solid #2eb843;
+            text-transform: capitalize;
+            font-size: 30px;
+            transition: 0.4s;
+            img{
+                height: 40px;
+            }
+            .img-2{
+                display: none;
+            }
+        }
+        .whatsapp:hover{
+            background: #2eb843;
+            color: white;
+            .img-2{
+                display: block;
+            }
+            .img-1{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:765px) {
+    .banner{
+        position: relative;
+        .contents{
+            margin-top: 50vh;
+            h1{
+                font-weight: bolder;
+                text-transform: capitalize;
+                font-size: 30px;
+                margin-bottom: 50px;
+                
+            }
+            h3{
+                font-size: 14px;
+                font-weight: bold;
+                position: relative;
+                border-bottom: 1px solid #02182694;
+                width: fit-content;
+                padding-bottom: 5px;
+                margin-left: 20px;
+                margin-bottom: 30px;
+                -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
+                    animation: bg-pan-left 5s ease-in-out infinite both;
+                color: #000000ba;
+                    .check{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 20px;
+                        transform: translateX(-120%);
+                    }
+            }
+        }
+    
+        /* image part */
+        .banner-img-div{
+            width: fit-content;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            .banner-img{
+                width: 300px;
+            }
+        }
+    
+        /* whatsapp button */
+        .row.whatsapp-row{
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            .whatsapp{
+                display: flex;
+                align-items: center;
+                color: #2eb843;
+                padding: 5px 15px;
+                border-radius: 30px;
+                border: 0;
+                width: fit-content;
+                background: white;
+                font-weight: bold;
+                border: 2px solid #2eb843;
+                text-transform: capitalize;
+                font-size: 20px;
+                transition: 0.4s;
+                img{
+                    height: 40px;
+                }
+                .img-2{
+                    display: none;
+                }
+            }
+            .whatsapp:hover{
+                background: #2eb843;
+                color: white;
+                .img-2{
+                    display: block;
+                }
+                .img-1{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+/* .................. benner END .............. */
+
+/* ......... shapes ............ */
+header{
+    .circle-shape.shape1{
+        top: 50px;
+        left: 15px;
+        z-index: 1;
+    }
+    .line-shape.shape2{
+        right: -26px;
+        top: 130px;
+        transform: rotate(143deg);
+    }
+    .line-shape.shape3{
+        right: -26px;
+        top: 140px;
+        transform: rotate(143deg);
+    }
+    .line-shape.shape4{
+        right: -26px;
+        top: 150px;
+        transform: rotate(143deg);
+    }
+    .shape-5{
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        animation: rotate 15s linear infinite;
+        z-index: 2;
+        .line-shape{
+            position: static;
+        }
+        .line-shape.a{
+            width: 10px;
+        }
+        .line-shape.b{
+            width: 30px;
+        }
+        .line-shape.c{
+            width: 50px;
+        }
+        .line-shape.d{
+            width: 70px;
+        }
+        .line-shape.e{
+            width: 50px;
+        }
+        .line-shape.f{
+            width: 30px;
+        }
+        .line-shape.g{
+            width: 10px;
+        }
+    }
+    .circle-shape-b.shape6{
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        z-index: 0;
+    }
+}

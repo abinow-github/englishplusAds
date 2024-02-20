@@ -5,8 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>englishplus ads</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootsrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    
+    <header>
+        <!-- Navbar -->
+<nav class="navbar navbar-expand navbar-light bg-body-tertiary">
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="https://mdbgo.com/">
+        <img
+          src="images/logo/englishplus-logo.png"
+          height="16"
+          alt="englishplus logo"
+          loading="lazy"
+          style="margin-top: -1px;"
+        />
+      </a>
+      <button class="btn" onclick="whatsapp()">chat now</button>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 cnt-col">
+
+                <div class="contents">
+                    <h1><span style="color: #8e3237;">english</span><span style="color: #343958;"> plus</span>  is your perfect language partner</h1>
+
+                    <h3>1 year വാലിഡിറ്റിയോട് കൂടി ഇംഗ്ലീഷ് പഠിക്കാം <img src="images/icons/check.png" alt="" class="check"></h3>
+                    <h3>ലോകത്തു എവിടെ നിന്നും ഏതു പ്രായത്തിലും ഇംഗ്ലീഷ് പഠിക്കാം. <img src="images/icons/check.png" alt="" class="check"></h3>
+                    <h3>നിങ്ങളുടെ ലെവൽ അനുസരിച്ചുള്ള കോഴ്സുകൾ <img src="images/icons/check.png" alt="" class="check"></h3>
+                    <h3>വാട്സാപ്പിലൂടെയും കോളിലൂടെയും 24 മണിക്കൂറും ട്രൈനേഴ്സിന്റെ ലഭ്യത. <img src="images/icons/check.png" alt="" class="check"></h3>
+                    <h3>നിങ്ങളുടെ free time  അനുസരിച് ക്ലാസുകൾ attend ചെയ്യാം. <img src="images/icons/check.png" alt="" class="check"></h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="row whatsapp-row">
+          <button class="whatsapp" onclick="whatsapp()"> <img src="images/icons/whatsapp.gif" alt="" class="img-1"><img src="images/icons/whatsapp.png" alt="" class="img-2"> whatsapp now </button>
+        </div>
+    </div>
+    <!-- image part -->
+    <div class="banner-img-div">
+      <img src="images/banner/banner image.png" alt="" class="banner-img">
+      <div class="shape-5">
+        <div class="line-shape a"></div>
+        <div class="line-shape b"></div>
+        <div class="line-shape c"></div>
+        <div class="line-shape d"></div>
+        <div class="line-shape e"></div>
+        <div class="line-shape f"></div>
+        <div class="line-shape g"></div>
+      </div>
+      <div class="circle-shape-b shape6"></div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <div class="circle-shape shape1"></div>
+  <div class="line-shape shape2"></div>
+  <div class="line-shape shape3"></div>
+  <div class="line-shape shape4"></div>
+  
+    </header>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <form method="POST" id="contactForm" name="contactForm" class="contactForm" action="assets/contact/php/sendEmail.php">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-md-12"> 
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Place">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary">
+                  <div class="submitting"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
