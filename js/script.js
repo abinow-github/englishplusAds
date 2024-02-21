@@ -4,7 +4,7 @@ function whatsapp(){
 window.onload = function () {
         setTimeout(function () {
             window.location.href = 'https://wa.me/918891213047';
-        }, 20000);
+        }, 30000);
     
 };
 
@@ -21,12 +21,12 @@ $(document).ready(function(){
         responsive: [{
             breakpoint: 768,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 2
             }
         }, {
             breakpoint: 520,
             settings: {
-                slidesToShow: 2
+                slidesToShow: 1
             }
         }]
     });
