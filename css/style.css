@@ -57,6 +57,38 @@
         transform: translateY(0);
     }
   }
+  @keyframes popup {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+  }
+  @keyframes check {
+    0% {
+        transform: scale(1);
+    }
+    5%{
+        transform: scale(1.5);
+    }
+    10%{
+        transform: scale(1);
+    }
+    15%{
+        transform: scale(1.5);
+    }
+    20%{
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
   
 /* animations END */
 /* ........ shapes .......... */
@@ -87,7 +119,7 @@ body{
     scroll-behavior: smooth;
     width: 100%;
     overflow-x: hidden;
-    background-image: radial-gradient(#2b42aa 0.5px, #e5e5f7d6 0.5px) !important;
+    background-image: radial-gradient(#2b42aa 0.5px, #cfcfefd6 0.5px) !important;
     background-size: 10px 10px !important;
 }
 @media screen and (max-width:765px) {
@@ -102,6 +134,7 @@ header{
     position: relative;
     width: 100%;
     overflow-x: hidden;
+    z-index: 100;
 }
 /* .................. navbar .............. */
 .navbar{
@@ -141,17 +174,31 @@ header{
             border-bottom: 1px solid #02182694;
             width: fit-content;
             padding-bottom: 5px;
-            margin-left: 20px;
+            margin-left: 0;
             margin-bottom: 30px;
             -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
                 animation: bg-pan-left 5s ease-in-out infinite both;
             color: #000000ba;
+            background: white;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 10px;
+            gap: 5px;
                 .check{
-                    position: absolute;
-                    left: 0;
-                    top: 0;
                     height: 20px;
-                    transform: translateX(-120%);
+                    animation: check 4s linear infinite;
+                }
+                .check.b{
+                    animation-delay: 0.2s;
+                }
+                .check.c{
+                    animation-delay: 0.4s;
+                }
+                .check.d{
+                    animation-delay: 0.8s;
+                }
+                .check.e{
+                    animation-delay: 1s;
                 }
         }
     }
@@ -160,6 +207,9 @@ header{
     }
     .contents h3:nth-child(even){
         color: var(--secondary-color);
+    }
+    .contents h3:nth-child(2) .ckeck{
+        animation-delay: 0.5s;
     }
 
     /* image part */
@@ -261,6 +311,7 @@ header{
         }
     }
 }
+
 @media screen and (max-width:765px) {
     .banner{
         position: relative;
@@ -280,17 +331,13 @@ header{
                 border-bottom: 1px solid #02182694;
                 width: fit-content;
                 padding-bottom: 5px;
-                margin-left: 20px;
                 margin-bottom: 20px;
+                margin-left: 0;
                 -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
                     animation: bg-pan-left 5s ease-in-out infinite both;
                 color: #000000ba;
                     .check{
-                        position: absolute;
-                        left: 0;
-                        top: 0;
                         height: 20px;
-                        transform: translateX(-120%);
                     }
             }
         }
@@ -467,6 +514,12 @@ header{
         z-index: 0;
     }
 }
+.two-square-shapes{
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+    top: 0;
 .shape7{
     position: absolute;
     top: 115vh;
@@ -490,6 +543,7 @@ header{
     transform: rotate(152deg) translateX(-40%);
     border-radius: 30px;
     background-image: linear-gradient(90deg, #993f48 0%, #8b2730 35%, #ce6872 100%);
+}
 }
 @media screen and (max-width:765px) {
     header{
@@ -558,6 +612,7 @@ header{
             transform: translateX(188px);
         }
     }
+    .two-square-shapes{
     .shape7{
         position: absolute;
         top: 133vh;
@@ -583,6 +638,7 @@ header{
         background-image: linear-gradient(90deg, #993f48 0%, #8b2730 35%, #ce6872 100%);
     }
 }
+}
 
 
 
@@ -594,10 +650,17 @@ header{
     width: 100%;
     height: 100vh;
     top: 0;
-    display: flex;
+    display: none;
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(3px);
+    overflow: hidden;
+}
+.contact-section.reveal{
+    display: flex;
+    .wrapper{
+        animation: popup 0.5s linear both;
+    }
 }
 
 
@@ -613,6 +676,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
+    cursor: pointer;
     i{
         font-size: 35px;
     }
@@ -622,6 +687,7 @@ header{
 /* .......... youtube section .................. */
 .youtube-section{
     padding: 50px 0;
+    z-index: 100;
     .col-md-3{
         margin-bottom: 20px;
         img{
