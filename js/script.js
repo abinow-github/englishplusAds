@@ -1,13 +1,12 @@
 function whatsapp(){
     window.location.href = 'https://wa.me/918891213047';
 }
-window.onload = function () {
+/*  window.onload = function () {
         setTimeout(function () {
             window.location.href = 'https://wa.me/918891213047';
         }, 30000);
     
-};
-
+}; */
 $(document).ready(function(){
     $('.customer-logos').slick({
         slidesToShow: 3,
@@ -24,10 +23,15 @@ $(document).ready(function(){
                 slidesToShow: 2
             }
         }, {
-            breakpoint: 520,
+            breakpoint: 620,
             settings: {
                 slidesToShow: 1
             }
         }]
     });
 });
+
+function closepopup(){
+   let poup = document.getElementById('popup')
+   poup.style.display= "none"
+}
