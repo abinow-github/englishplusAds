@@ -119,7 +119,7 @@ body{
     scroll-behavior: smooth;
     width: 100%;
     overflow-x: hidden;
-    background-image: radial-gradient(#2b42aa 0.5px, #cfcfefd6 0.5px) !important;
+    background-image: radial-gradient(#2b42aa 0.5px, #ececffb7 0.5px) !important;
     background-size: 10px 10px !important;
 }
 @media screen and (max-width:765px) {
@@ -178,12 +178,11 @@ header{
             margin-bottom: 30px;
             -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
                 animation: bg-pan-left 5s ease-in-out infinite both;
-            color: #000000ba;
-            background: white;
             display: flex;
             flex-direction: row-reverse;
             padding: 10px;
             gap: 5px;
+            color: white;
                 .check{
                     height: 20px;
                     animation: check 4s linear infinite;
@@ -203,10 +202,10 @@ header{
         }
     }
     .contents h3:nth-child(odd){
-        color: var(--primary-color);
+        background: var(--primary-color);
     }
     .contents h3:nth-child(even){
-        color: var(--secondary-color);
+        background: var(--secondary-color);
     }
     .contents h3:nth-child(2) .ckeck{
         animation-delay: 0.5s;
@@ -335,7 +334,7 @@ header{
                 margin-left: 0;
                 -webkit-animation: bg-pan-left 5s ease-in-out infinite both;
                     animation: bg-pan-left 5s ease-in-out infinite both;
-                color: #000000ba;
+                color: white;
                     .check{
                         height: 20px;
                     }
@@ -355,7 +354,7 @@ header{
             }
             .google-review-div{/* google-review */
                 position: absolute;
-                left: -20%;
+                left: -22px;
                 top: -10px;
                 background: white;
                 padding: 10px;
@@ -365,6 +364,7 @@ header{
                 border-radius: 10px;
                 z-index: 100;
                 animation: updown 3s linear infinite;
+                width: 110px;
                 .logo-rating-div{
                     display: flex;
                     align-items: center;
@@ -393,6 +393,7 @@ header{
                         color: rgba(58, 58, 65, 0.689);
                         margin-bottom: 0;
                         font-size: 12px;
+                        text-align: center;
                     }
                 }
                 .tail{
@@ -517,7 +518,7 @@ header{
 .two-square-shapes{
     position: absolute;
     width: 100%;
-    height: 200vh;
+    height: 170vh;
     overflow: hidden;
     top: 0;
 .shape7{
@@ -695,10 +696,18 @@ header{
         }
     }
 }
+.youtube-title{
+    font-weight: bold;
+    color: var(--secondary-color);
+    span{
+        color: var(--primary-color);
+    }
+}
 
 
 
 .section-1{
+    z-index: 100;
     .slick-slide {
      margin: 0px 20px;
  }

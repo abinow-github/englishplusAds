@@ -1,15 +1,7 @@
 function whatsapp(){
     window.location.href = 'https://wa.me/918891213047';
 }
- window.onload = function () {
-        setTimeout(function () {
-            window.location.href = 'https://wa.me/918891213047';
-        }, 30000); 
-    let popup = document.getElementById('popup')
-    setTimeout(function(){
-        popup.classList.add('reveal')
-    },10000);
-};
+
 $(document).ready(function(){
     $('.customer-logos').slick({
         slidesToShow: 3,
