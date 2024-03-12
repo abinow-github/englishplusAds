@@ -117,9 +117,46 @@
       <!-- accordion-section -->
       <section class="accrodion-section">
         <div class="container">
-          
+          <button class="accordion">Best Spoken English Institution in Kerala with 10000+ 5star reviews. 1 on 1 classes</button>
+          <div class="panel">
+            <p>Unlock the power of effective communication with our comprehensive online English speaking course, designed for learners of all levels. <br>
+
+              Join our spoken English classes online and immerse yourself in interactive lessons, tailored to improve your English speaking skills with practical application.
+              
+              Explore our English learning course, featuring dynamic online classes that provide a flexible and engaging way to enhance your language proficiency.
+              
+              Discover the best online spoken English course that suits your needs, ensuring a structured and enjoyable learning experience with experienced instructors.
+              
+              Embark on a journey to fluency with our online English learning classes, allowing you to progress at your own pace and in the comfort of your home.
+              
+              Enroll now in the best online spoken English classes in Kerala, led by top instructors dedicated to your language development.
+              
+              Become part of the best-spoken English institute in Kerala and elevate your communication skills through our spoken English classes online.
+              
+              Master the art of speaking English fluently with our step-by-step guidance, covering essential grammar and practical application.
+              
+              Learn English online effortlessly with our easy-to-follow courses, providing a solid foundation for your language journey.
+              
+              Enhance your confidence and competence in English through our comprehensive English speaking courses, offering valuable insights and real-life communication scenarios.</p>
+          </div>
         </div>
       </section>
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
       <!-- accordion-section END -->
 
     <section class="contact-section" id="popup">
